@@ -1,0 +1,26 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Vicky @ Annadurai
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+    <data>
+        <template id="report_quotation_inherit_demo" inherit_id="sale.report_saleorder_document">
+        
+        <xpath expr="//h2/span[@t-field='doc.name']" position="after">
+            <div class="text-right"><h4><strong>GSTIN Number</strong></h4><h5><span t-field="doc.gst_in"/></h5></div>
+        </xpath>
+<!--         <xpath expr="//th[contains(@class, 'price_tax_included')]" position="after">
+        </xpath> -->
+        <xpath expr="//span[@t-field='doc.amount_untaxed']" position="after">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="text-right">
+                    <strong>GST       </strong>
+                    <span t-field="doc.gst_total" t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                    <strong>SGST      </strong>
+                    <span t-field="doc.sgst_total" t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                    </div>
+        </xpath>
+        </template> 
+    </data>
+</openerp>

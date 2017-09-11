@@ -1,0 +1,44 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Vicky @ Annadurai
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+    <record model="ir.ui.view" id="gst_list">
+        <field name="name">GST list</field>
+        <field name="model">gst.tax</field>
+        <field name="arch" type="xml">
+            <tree>
+                 <field name="tax_name" />
+                 <field name="gst_tax_percent" />
+                 <field name="sgst_tax_percent" />
+            </tree>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="gst_form_views">
+    <field name="name">GST form</field>
+    <field name="model">gst.tax</field>
+    <field name="arch" type="xml">
+        <form string="GST Sales">
+        <sheet>
+        <group>
+                <field name="tax_name" />
+                <field name="gst_tax_percent" />
+                <field name="sgst_tax_percent"/> 
+        </group>
+        </sheet>
+        </form>
+    </field>
+    </record>   
+    
+    <record model="ir.actions.act_window" id="gst_action_window">
+            <field name="name">GST</field>
+            <field name="res_model">gst.tax</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="usage">menu</field>
+    </record>
+    
+        <menuitem name="GST TAX " id="gst_tax_id" parent="sales_team.menu_sale_config" action="gst_action_window" />
+</data>
+</openerp>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Vicky @ Annadurai
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+   		 <record id="res_partner_gst_number_add" model="ir.ui.view">
+         <field name="name">res.partner.gst.number.add</field>
+         <field name="model">res.partner</field>
+	     <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="arch" type="xml">
+             <xpath expr="//field[@name='phone']" position="before">
+		               <field name="gst_in"  attrs="{'required': [('ignore_gstin','=',False),('supplier','=',True)]}"/> 
+		               <field name="ignore_gstin" attrs="{'invisible': [('supplier','=',False)]}"/>
+        	</xpath>
+      </field>
+    </record>
+</data>
+</openerp>

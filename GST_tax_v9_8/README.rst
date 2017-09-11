@@ -1,8 +1,8 @@
 
 
-================================
-GST / SGST INDIAN TAX 2017 v8/v9
-================================
+====================================
+GST / SGST INDIAN TAX 2017 v8/v9 தமிழ்
+====================================
 
 This module Calculates Indian GST/SGST which is implemented by Govt. INDIA 2017 for SO/PO.
 Has Report for Sale and purchase.There are two options,

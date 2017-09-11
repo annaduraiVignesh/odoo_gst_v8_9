@@ -1,4 +1,6 @@
-
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
 
 ====================================
 GST / SGST INDIAN TAX 2017 v8/v9 தமிழ்

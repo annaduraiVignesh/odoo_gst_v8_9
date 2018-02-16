@@ -7,13 +7,6 @@
     'summary': """
        GST / SGST Indian Tax system 2017 for VERSION 8 and 9. pls check for V10""",
 
-    'description': """
-        Calculate Indian GST/SGST which was implemented by Govt. INDIA 2017 for SO/PO with REPORT.
-        Has Report for Sale and purchase.There are two options,
-        1) Auto reconcile of GST with dedicated sale/purchase configuration of CGST and SGST.
-        2) Manual entry of GST percentages in SO/PO too.
-    """,
-
     'author': " Vignesh ",
     'website': "viki2.odoo.com",
     'license': 'AGPL-3',
